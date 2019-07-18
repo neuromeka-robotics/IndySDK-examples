@@ -39,8 +39,6 @@ public:
 
 private:
 	NRMKIndy::SharedData::RobotRTSharedData _rtData;
-	NRMKIndy::SharedData::RobotControlStatusSharedData _ctrlStateData;
-	NRMKIndy::SharedData::SmartDIOSharedData _smartDIO;
 	DataLogger _dataLogger;
 	unsigned int _logCnt;
 

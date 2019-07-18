@@ -40,7 +40,7 @@ void JointPDControl::reset(int jIndex)
 
 void JointPDControl::setGains(JointVec const & kp, JointVec const & kv, JointVec const & ki)
 {
-//	printf("Set gain\n");
+
 }
 
 int JointPDControl::computeControlTorq(ROBOT & robot, LieGroup::Vector3D const & gravDir, JointVec const & qDesired, JointVec const & qdotDesired, JointVec const & qddotDesired, JointVec & torque)
@@ -93,7 +93,7 @@ int JointPDControl::computeControlTorq(ROBOT & robot, LieGroup::Vector3D const &
 
 	// Logging data in real-time
 	_time += 0.0025;
-//	_time = _rtData.time;
+
 	double q[JOINT_DOF], qdot[JOINT_DOF], tau[JOINT_DOF];
 
 	for (int i = 0; i < JOINT_DOF; i++)
@@ -109,7 +109,7 @@ int JointPDControl::computeControlTorq(ROBOT & robot, LieGroup::Vector3D const &
 	if (_logCnt <= 0)
 	{
 		_dataLogger.triggerSaving();
-		_logCnt = LOG_DATA_SAVE_PERIOD; // 5s
+		_logCnt = LOG_DATA_SAVE_PERIOD; // 10s
 	}
 
 	return 0;

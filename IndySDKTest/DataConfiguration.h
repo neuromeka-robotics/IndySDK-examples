@@ -4,8 +4,8 @@
 #include <string.h>
 #include <cstdio>
 
-//#pragma pack(push)  /* push current alignment to stack*/
-//#pragma pack(4)     /* set alignment to 4 byte boundary*/
+#pragma pack(push)  /* push current alignment to stack*/
+#pragma pack(4)     /* set alignment to 4 byte boundary*/
 
 struct LoggedData
 {
@@ -15,7 +15,6 @@ struct LoggedData
 	};
 
 	double time;
-
 	double q[JOINT_DOF];
 	double qdot[JOINT_DOF];
 	double tau[JOINT_DOF];
@@ -56,6 +55,6 @@ struct LoggedData
 	}
 };
 
-//#pragma pack(pop)   /*restore original alignment from stack*/
+#pragma pack(pop)   /*restore original alignment from stack*/
 
 #endif /*DATACONFIGURATION_H_*/
